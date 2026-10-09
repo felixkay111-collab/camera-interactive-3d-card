@@ -1,0 +1,97 @@
+{
+  "theme": "致xxx",
+  "greeting": "致xxx",
+  "finale": "生日快乐",
+  "finaleMessage": "把这份祝福，送给特别的你。",
+  "subtitles": {
+    "brandSubtitle": "A HANDFUL OF MEMORIES",
+    "welcomeEyebrow": "FOR YOU, WITH LOVE",
+    "welcomeDescription": "把走过的时光，\n轻轻放进你的掌心。",
+    "heroBackCaption": "那些一起笑过的日子",
+    "heroFrontCaption": "每一刻，都是珍贵的回忆",
+    "memoryCountLabel": "{count} 段回忆 · 一封心里的话",
+    "welcomeFooter": "用手，翻开属于你的故事",
+    "welcomeFooterEnglish": "✧ A LITTLE MAGIC, JUST FOR YOU",
+    "startButton": "开启这份惊喜 ↗",
+    "demoButton": "先用鼠标彩排 →",
+    "readyMessage": "♡ 回忆已准备好 · 摄像头互动 / 本地离线播放",
+    "draftMessage": "当前 {ready}/{count} 段回忆已准备 · 点击“准备回忆”编辑文字、素材和信件",
+    "tutorialEyebrow": "LET THE MEMORIES BEGIN",
+    "tutorialTitle": "把手伸向星光",
+    "tutorialDescription": "轻轻移动手掌，看看星光跟着你。\n比一个 OK 手势，再松开，召唤星光蛋糕。",
+    "tutorialButton": "我准备好了，召唤蛋糕 →",
+    "blessingEyebrow": "A LITTLE CONSTELLATION FOR YOU",
+    "blessingCakeTitle": "属于你的电子蛋糕",
+    "blessingCakeDescription": "握起手掌，星光聚成蛋糕；张开手掌，星光散开。\n左右移动手掌，转动这份祝福。",
+    "blessingBouquetTitle": "属于你的电子花束",
+    "blessingBouquetDescription": "握起手掌，星光聚成花束；张开手掌，星光散开。\n左右移动手掌，看看花瓣和缎带。",
+    "memoryEyebrow": "OUR LITTLE CONSTELLATION",
+    "sampleLabel": "演示画面 · 请换成你们的照片",
+    "envelopeEyebrow": "EVERY MEMORY LEADS TO YOU",
+    "envelopeTitle": "还有一些话，想对你说",
+    "envelopeDescription": "张开手掌，停留一小会儿。\n这封信，就为你打开。",
+    "envelopeAddressee": "致xxx",
+    "envelopeButton": "打开这封信 ♡",
+    "letterEyebrow": "WORDS FROM MY HEART",
+    "letterAddressee": "致xxx",
+    "finaleEyebrow": "YOU MAKE OUR WORLD BEAUTIFUL",
+    "replayButton": "再看一次回忆 ↺",
+    "cameraStarting": "正在准备摄像头 · 也可点击右箭头",
+    "noHand": "伸出一只手，让星光找到你",
+    "tutorialInstruction": "比一个 OK 手势，再松开 · 召唤星光蛋糕",
+    "blessingBouquetInstruction": "比一个 OK 手势，再松开 · 召唤星光花束",
+    "blessingMemoryInstruction": "比一个 OK 手势，再松开 · 翻开第一段回忆",
+    "memoryInstruction": "比一个 OK 手势，再松开 · 翻到下一段回忆",
+    "memoryLastInstruction": "比一个 OK 手势，再松开 · 看看还有什么惊喜",
+    "envelopeInstruction": "张开手掌，停留一秒 · 打开信",
+    "letterInstruction": "比一个 OK 手势，再松开 · 继续读信",
+    "letterLastInstruction": "比一个 OK 手势，再松开 · 收下最后的祝福",
+    "finaleInstruction": "这份爱，一直都在"
+  },
+  "memories": [
+    {
+      "src": "/demo/memory-01.svg",
+      "caption": "",
+      "placeholder": true
+    },
+    {
+      "src": "/demo/memory-02.svg",
+      "caption": "",
+      "placeholder": true
+    },
+    {
+      "src": "/demo/memory-03.svg",
+      "caption": "",
+      "placeholder": true
+    },
+    {
+      "src": "/demo/memory-04.svg",
+      "caption": "",
+      "placeholder": true
+    },
+    {
+      "src": "/demo/memory-05.svg",
+      "caption": "",
+      "placeholder": true
+    },
+    {
+      "src": "/demo/memory-06.svg",
+      "caption": "",
+      "placeholder": true
+    },
+    {
+      "src": "/demo/memory-07.svg",
+      "caption": "",
+      "placeholder": true
+    },
+    {
+      "src": "/demo/memory-08.gif",
+      "caption": "",
+      "placeholder": true
+    }
+  ],
+  "letter": "",
+  "music": "/music/dream.wav",
+  "letterPlaceholder": true,
+  "motionMissing": false
+}

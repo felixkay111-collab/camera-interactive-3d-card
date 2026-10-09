@@ -1,0 +1,40 @@
+/* Content editor and configurable text layout. */
+[data-subtitle], #welcome-title, #finale-title { white-space: pre-line; overflow-wrap: anywhere; }
+.brand small { white-space: normal; }
+.memory-dots { flex-wrap: wrap; justify-content: center; max-width: 80vw; gap: 10px; }
+#setup-dialog { overflow: auto; width: min(1060px, 95vw); }
+#setup-dialog .setup-columns { display: block; }
+.copy-editor { border: 0; padding: 0; margin: 20px 0; }
+.copy-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 16px; margin-top: 16px; }
+.copy-grid label { display: flex; flex-direction: column; gap: 7px; color: #dacbb6; font-size: 12px; }
+.copy-grid input, .copy-grid textarea { width: 100%; resize: vertical; background: #121b23; color: #eee3d0; border: 1px solid var(--border); border-radius: 5px; padding: 10px 12px; font-size: 14px; line-height: 1.6; }
+.subtitle-editor { display: block; margin-top: 20px; }
+.subtitle-editor details { border-top: 1px solid var(--border); padding: 14px 0; }
+.subtitle-editor summary { color: var(--gold); font-size: 14px; cursor: pointer; }
+.editor-tabs { display: flex; gap: 8px; margin-bottom: 22px; flex-wrap: wrap; }
+.editor-tabs button { border: 1px solid var(--border); border-radius: 6px; background: transparent; color: #dacbb6; padding: 10px 16px; font-size: 13px; }
+.editor-tabs button[aria-pressed=true] { color: #30281e; background: var(--gold); }
+.asset-actions { display: flex; gap: 18px; margin: 8px 0; }
+.asset-row { padding: 12px; gap: 12px; }
+.asset-row img, .asset-row video { width: 80px; height: 64px; object-fit: contain; background: #121b23; border-radius: 4px; }
+.asset-details { display: flex; flex-direction: column; gap: 6px; flex: 1; min-width: 0; }
+.asset-details small { color: #b6a082; font-size: 11px; }
+.asset-details input { width: 100%; font-size: 13px; }
+.asset-controls { display: flex; align-items: center; gap: 8px; }
+.mini-file-button, .remove-button { border: 1px solid var(--border); background: transparent; color: var(--gold-soft); font-size: 12px; padding: 7px 9px; border-radius: 4px; cursor: pointer; white-space: nowrap; }
+.remove-button { color: #e9b1a6; }
+#setup-dialog .dialog-footer { position: sticky; bottom: -30px; z-index: 2; background: #1b242e; padding-bottom: 16px; }
+#save-status { flex: 1; }
+.saving #setup-dialog label { pointer-events: none; }
+.saving #setup-dialog textarea { opacity: .5; }
+@media(max-width:600px) {
+ .copy-grid { grid-template-columns: 1fr; }
+ .asset-row { flex-wrap: wrap; gap: 8px; padding: 10px; }
+ .asset-row img, .asset-row video { width: 55px; height: 50px; }
+ .asset-details { min-width: 110px; }
+ .asset-controls { margin-left: auto; }
+ #setup-dialog .dialog-footer { bottom: -22px; flex-direction: row; flex-wrap: wrap; }
+ #setup-dialog .dialog-footer > span { width: 100%; flex: auto; }
+ #setup-dialog .dialog-footer > .primary-button { width: auto; flex: 1; }
+}
+

@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#121923">
+  <title id="page-title">致xxx</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/styles/main.css">
+  <link rel="stylesheet" href="/styles/editor.css">
+</head>
+<body>
+  <canvas id="sky" aria-hidden="true"></canvas>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <header class="topbar">
+    <a class="brand" href="/" aria-label="致xxx首页"><span class="brand-mark">✧</span><span id="brand-title">致xxx<small data-subtitle="brandSubtitle">A HANDFUL OF MEMORIES</small></span></a>
+    <nav class="tools" aria-label="体验设置">
+      <button id="music-toggle" class="icon-button" title="开启或关闭音乐" aria-label="开启或关闭音乐">♫</button>
+      <input id="volume" aria-label="音乐音量" type="range" min="0" max="100" value="45">
+      <button id="fullscreen" class="icon-button" title="全屏" aria-label="全屏">⛶</button>
+      <button id="settings" class="text-button">准备回忆</button>
+    </nav>
+  </header>
+  <main id="experience">
+    <section id="welcome" class="screen active">
+      <div class="welcome-copy">
+        <p class="eyebrow" data-subtitle="welcomeEyebrow">FOR YOU, WITH LOVE</p>
+        <h1 id="welcome-title">致<br><em>xxx</em><span class="title-star">✧</span></h1>
+        <p class="welcome-description" data-subtitle="welcomeDescription">把走过的时光，<br>轻轻放进你的掌心。</p>
+        <div class="welcome-actions"><button data-subtitle="startButton" id="start" class="primary-button">开启这份惊喜 <span>↗</span></button><button data-subtitle="demoButton" id="demo" class="quiet-button">先用鼠标彩排 →</button></div>
+        <p id="readiness" class="readiness">正在整理星光……</p>
+      </div>
+      <div class="welcome-art" aria-hidden="true">
+        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="orbit orbit-three"></div>
+        <div class="orbit-dot d1"></div><div class="orbit-dot d2"></div><div class="orbit-dot d3"></div><div class="orbit-dot d4"></div>
+        <div class="hero-card hero-card-back"><span data-subtitle="heroBackCaption">那些一起笑过的日子</span></div>
+        <div class="hero-card hero-card-front"><div class="hero-landscape"><span class="landscape-sun"></span><span class="landscape-hill h1"></span><span class="landscape-hill h2"></span></div><span data-subtitle="heroFrontCaption">每一刻，都是珍贵的回忆</span><b>♡</b></div>
+        <div class="art-label" data-subtitle="memoryCountLabel"></div>
+        <span class="art-spark s1">✧</span><span class="art-spark s2">✦</span><span class="art-spark s3">✧</span>
+      </div>
+      <div class="welcome-footer"><span data-subtitle="welcomeFooter">用手，翻开属于你的故事</span><span data-subtitle="welcomeFooterEnglish">✧ A LITTLE MAGIC, JUST FOR YOU</span></div>
+    </section>
+    <section id="tutorial" class="screen centered">
+      <p class="eyebrow" data-subtitle="tutorialEyebrow">LET THE MEMORIES BEGIN</p><h2 data-subtitle="tutorialTitle">把手伸向星光</h2>
+      <div class="gesture-illustration" aria-hidden="true"><span class="finger f-one"></span><span class="finger f-two"></span><span class="pinch-spark">✧</span><div class="gesture-orbit"></div></div>
+      <p class="scene-description" data-subtitle="tutorialDescription">轻轻移动手掌，看看星光跟着你。<br>比一个 OK 手势，再松开，翻开第一段回忆。</p>
+      <button class="secondary-button" data-next data-subtitle="tutorialButton">我准备好了，召唤蛋糕 →</button>
+    </section>
+    <section id="blessing" class="screen centered blessing-screen">
+      <p class="eyebrow" data-subtitle="blessingEyebrow">A LITTLE CONSTELLATION FOR YOU</p>
+      <h2 id="blessing-title">属于你的电子蛋糕</h2>
+      <div class="blessing-stage" aria-label="由星星组成的3D生日祝福">
+        <canvas id="blessing-canvas" aria-hidden="true"></canvas>
+        <div class="blessing-orbit blessing-orbit-one"></div><div class="blessing-orbit blessing-orbit-two"></div>
+      </div>
+      <p id="blessing-description" class="scene-description">伸出手，让星光聚成一枚生日蛋糕。<br>比一个 OK 手势，再松开，召唤下一份祝福。</p>
+    </section>
+    <section id="memories" class="screen memory-screen">
+      <div class="memory-heading"><p class="eyebrow" data-subtitle="memoryEyebrow">OUR LITTLE CONSTELLATION</p><p id="memory-number">01 <span>/ 08</span></p></div>
+      <figure id="photo-card" class="photo-card"><div class="photo-wrap"><div id="memory-stage" class="memory-stage"><div class="memory-layer is-visible" data-layer="0"><img id="memory-image" alt="家庭回忆照片" draggable="false"><video id="memory-video" muted playsinline preload="auto" hidden aria-label="动态家庭回忆"></video></div><div class="memory-layer" data-layer="1"><img id="memory-image-next" alt="家庭回忆照片" draggable="false"><video id="memory-video-next" muted playsinline preload="auto" hidden aria-label="动态家庭回忆"></video></div></div><span data-subtitle="sampleLabel" id="sample-label" class="sample-label">演示画面 · 请换成你们的照片</span></div><figcaption id="memory-caption"></figcaption></figure>
+      <div id="memory-dots" class="memory-dots" aria-label="回忆进度"></div>
+    </section>
+    <section id="envelope" class="screen centered">
+      <p class="eyebrow" data-subtitle="envelopeEyebrow">EVERY MEMORY LEADS TO YOU</p><h2 data-subtitle="envelopeTitle">还有一些话，想对你说</h2>
+      <div class="envelope-scene"><div id="memory-ring" class="memory-ring"></div><div class="envelope"><div data-subtitle="envelopeAddressee" id="envelope-title" class="envelope-paper">致xxx</div><div class="envelope-body"></div><div class="envelope-flap"></div><span class="envelope-seal">♡</span></div></div>
+      <p class="scene-description" data-subtitle="envelopeDescription">张开手掌，停留一小会儿。<br>这封信，就为你打开。</p>
+      <div class="hold-progress"><div id="hold-fill"></div></div>
+      <button class="secondary-button" data-next data-subtitle="envelopeButton">打开这封信 ♡</button>
+    </section>
+    <section id="letter" class="screen letter-screen"><p class="eyebrow" data-subtitle="letterEyebrow">WORDS FROM MY HEART</p><article class="letter-paper"><div class="letter-top"><span>♡</span><span data-subtitle="letterAddressee" id="letter-title">致xxx</span></div><div id="letter-body"></div><footer id="letter-page"></footer></article></section>
+    <section id="finale" class="screen centered"><div id="finale-photos" class="finale-photos" aria-hidden="true"></div><p class="eyebrow" data-subtitle="finaleEyebrow">YOU MAKE OUR WORLD BEAUTIFUL</p><div class="flower" aria-hidden="true">✿</div><h2 id="finale-title"><em>生日快乐</em></h2><p id="finale-message" class="finale-message"></p><button data-subtitle="replayButton" id="replay" class="secondary-button">再看一次回忆 ↺</button></section>
+  </main>
+  <footer id="interaction-bar" class="interaction-bar" hidden><button id="previous" class="nav-button" aria-label="上一页">←</button><div class="interaction-copy"><span id="camera-light" class="camera-light"></span><span id="instruction">伸出一只手，让星光找到你</span></div><button id="next" class="nav-button" aria-label="下一页">→</button></footer>
+  <div id="memory-bridge" aria-hidden="true">
+    <div class="memory-bridge-wash"></div>
+    <div class="memory-bridge-sparks" aria-hidden="true">
+      <i style="--x:18%;--y:25%;--d:.02s">✦</i><i style="--x:28%;--y:67%;--d:.16s">✧</i><i style="--x:39%;--y:18%;--d:.3s">✦</i><i style="--x:52%;--y:76%;--d:.08s">✧</i><i style="--x:64%;--y:22%;--d:.24s">✦</i><i style="--x:77%;--y:62%;--d:.36s">✧</i><i style="--x:86%;--y:33%;--d:.14s">✦</i><i style="--x:12%;--y:52%;--d:.42s">✧</i><i style="--x:90%;--y:75%;--d:.28s">✦</i><i style="--x:46%;--y:31%;--d:.5s">✧</i>
+    </div>
+    <div class="memory-bridge-ring" aria-hidden="true"><i>✦</i><i>✧</i><i>✦</i><i>✧</i><i>✦</i><i>✧</i><i>✦</i><i>✧</i></div>
+    <div class="memory-bridge-frame" aria-hidden="true"><span></span><b></b></div>
+  </div>
+  <div id="hand-cursor" class="hand-cursor" hidden aria-hidden="true"><span></span></div>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <video id="camera" playsinline muted hidden></video><audio id="music" loop preload="auto"></audio>
+  <dialog id="setup-dialog">
+    <div class="dialog-heading"><div><p class="eyebrow">PREPARE A LITTLE LOVE</p><h2>编辑这份贺卡</h2></div><button id="close-setup" class="icon-button" aria-label="关闭">×</button></div>
+    <p class="setup-intro">这里可以一次编辑标题、字幕、信件和全部回忆。每段回忆都能单独选择照片或视频，也可以新增、删除和排序。</p>
+    <nav class="editor-tabs" aria-label="编辑内容"><button type="button" data-editor-tab="copy" aria-pressed="true">文字与字幕</button><button type="button" data-editor-tab="memories" aria-pressed="false">照片与视频</button><button type="button" data-editor-tab="letter" aria-pressed="false">信件与音乐</button></nav>
+    <section class="copy-editor" data-editor-panel="copy"><div class="section-heading"><h3>01 · 标题与字幕</h3><span class="field-hint">修改后保存即可生效</span></div><div class="copy-grid"><label>页面标题<input id="theme-input" type="text" maxlength="100"></label><label>开场标题<input id="greeting-input" type="text" maxlength="100"></label><label>结尾标题<input id="finale-input" type="text" maxlength="100"></label><label>结尾正文<textarea id="finale-message-input" maxlength="1000" rows="2"></textarea></label></div><div id="subtitle-editor" class="subtitle-editor"></div></section>
+    <div class="setup-columns"><section class="asset-section" data-editor-panel="memories" hidden><div class="section-heading"><h3>02 · 回忆素材</h3><label class="file-button">添加照片 / 视频<input id="memory-files" type="file" accept="image/jpeg,image/png,image/webp,image/gif,video/mp4,video/webm" multiple hidden></label></div><p class="field-hint">支持 JPG / PNG / WebP / GIF / MP4 / WebM，1–50 项。导入后追加到列表；横竖相框自动适配。</p><div class="asset-actions"><button id="clear-memories" class="quiet-button" type="button">清空列表</button><button id="add-memory" class="quiet-button" type="button">添加空白回忆</button></div><p id="asset-count" class="field-hint" aria-live="polite"></p><div id="asset-list"></div></section><section class="letter-section" data-editor-panel="letter" hidden><div class="section-heading"><h3>03 · 信件与音乐</h3><label class="file-button">导入TXT<input id="letter-file" type="file" accept=".txt" hidden></label></div><textarea id="letter-input" placeholder="致xxx：&#10;&#10;把想说的话写在这里……" aria-label="信件内容"></textarea><div class="section-heading music-heading"><h3>背景音乐</h3><label class="file-button">替换音乐<input id="music-file" type="file" accept=".mp3,.wav,.m4a,.ogg" hidden></label></div><p id="music-name" class="field-hint">原创 · 星光里的晚安（钢琴 / 钟琴 / 氛围和弦）</p><button id="default-music" class="quiet-button">恢复原创音乐</button></section></div>
+    <div class="dialog-footer"><span id="save-status" role="status">素材仅保存在这台电脑的项目文件夹。</span><button id="cancel-edit" class="quiet-button" type="button">取消修改</button><button id="save-content" class="primary-button">保存这份心意 <span>♡</span></button></div>
+  </dialog>
+  <script type="module" src="/src/app.js"></script>
+</body>
+</html>

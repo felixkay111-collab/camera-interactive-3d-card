@@ -1,0 +1,18 @@
+{
+  "name": "camera-interactive-3d-card",
+  "version": "1.1.0",
+  "description": "摄像头交互式3D贺卡：本地手势、星光蛋糕、花束与回忆展示",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "start": "node app/server.mjs",
+    "test": "node --test tests/interaction.test.mjs tests/server.test.mjs",
+    "test:browser": "node tests/editor.browser.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "devDependencies": {
+    "playwright": "1.62.1"
+  }
+}
